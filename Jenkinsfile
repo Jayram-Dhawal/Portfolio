@@ -4,12 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-<<<<<<< HEAD
                 git 'https://github.com/Jayram-Dhawal/Portfolio.git'
-=======
-                echo 'Cloning the repository...'
-                git url: "${REPO_URL}", branch: 'master'
->>>>>>> 7964d27eb6181b1419916804bcb43a522dfc52b8
             }
         }
 
