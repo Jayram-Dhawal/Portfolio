@@ -1,47 +1,63 @@
 pipeline {
     agent any
 
-    environment {
-        REPO_URL = 'https://github.com/Jayram-Dhawal/Portfolio.git'
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                echo 'Cloning the repository...'
-                git url: "${REPO_URL}", branch: 'main'
+                git 'https://github.com/Jayram-Dhawal/Portfolio.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'No build needed for static site.'
+                echo 'Building...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running basic HTML validation...'
-                // Example: Validate HTML using a tool if available
-                // sh 'html-validator-cli index.html'
+                echo 'Testing...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying site...'
-                // Example: rsync to web server or push to S3
-                // sh 'rsync -avz ./ /var/www/html/'
+                echo 'Deploying...'
             }
         }
     }
 
     post {
         success {
-            echo '✅ Build and Deployment Successful!'
+            mail to: 'your-email@gmail.com',
+                 subject: "✅ Jenkins Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """Hi,
+
+The Jenkins build was successful.
+
+🔧 Job: ${env.JOB_NAME}
+🔢 Build: #${env.BUILD_NUMBER}
+🔗 Link: ${env.BUILD_URL}
+
+Thanks,
+Jenkins"""
         }
+
         failure {
-            echo '❌ Build Failed!'
+            mail to: 'your-email@gmail.com',
+                 subject: "❌ Jenkins Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """Hi,
+
+The Jenkins build failed.
+
+🔧 Job: ${env.JOB_NAME}
+🔢 Build: #${env.BUILD_NUMBER}
+🔗 Link: ${env.BUILD_URL}
+
+Please check the logs.
+
+Thanks,
+Jenkins"""
         }
     }
 }
