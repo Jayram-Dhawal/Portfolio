@@ -22,10 +22,10 @@ const TextWriter = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const designations = [
-    "Cloud Engineer",
+    "IT Support Specialist",
     "System Administrator",
-    "IT Engineer",
-    "Passionate Cloud DevOps Engineer",
+    "Cloud Engineer",
+    "IT Operation Engineer",
     "AI Enthusiast",
     "Tech Content Creator",
   ];
@@ -41,14 +41,14 @@ const TextWriter = () => {
           : fullText.substring(0, text.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? 40 : 65);
+      setTypingSpeed(isDeleting ? 60 : 85);
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 5);
       } else if (isDeleting && text === "") {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
-        setTypingSpeed(30);
+        setTypingSpeed(15);
       }
     };
 
@@ -78,11 +78,11 @@ const SidebarNavigation = () => {
       href: "#t-skills",
       icon: <span className="text-lg">⚙️</span>,
     },
-    {
-      name: "Projects",
-      href: "#projects",
-      icon: <span className="text-lg">🚀</span>,
-    },
+    // {
+    //   name: "Projects",
+    //   href: "#projects",
+    //   icon: <span className="text-lg">🚀</span>,
+    // },
     {
       name: "Certifications",
       href: "#certifications",
@@ -95,7 +95,7 @@ const SidebarNavigation = () => {
     },
     {
       name: "Resume",
-      href: "/Jayram_Dhawal_Resume.pdf",
+      href: "/IT Operation Engineer_Jayram Dhawal.pdf",
       download: true,
       icon: <span className="text-lg">📄</span>,
     },
@@ -243,7 +243,7 @@ const Hero = () => {
         </p>
 
         <div className="flex items-center justify-center flex-shrink-0">
-          <img src="./QrCode1.png" alt="Get Link" height={110} width={110} />
+          <img src="./QR.png" alt="Get Link" height={110} width={110} />
         </div>
       </div>
 
@@ -274,7 +274,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full sm:w-auto">
             <a
-              href="./Jayram_Dhawal_Resume.pdf"
+              href="./IT Operation Engineer_Jayram Dhawal.pdf"
               download
               className="inline-block bg-cyan-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-cyan-600 transform hover:-translate-y-1 transition-all duration-300 text-center"
             >
@@ -287,12 +287,12 @@ const Hero = () => {
             >
               Get In Touch
             </a>
-            <a
+            {/* <a
               href="#projects"
               className="inline-block border-2 border-gray-600 px-6 py-3 rounded-full text-white font-semibold hover:bg-gray-800 hover:border-gray-500 transform hover:-translate-y-1 transition-all duration-300 text-center"
             >
               View Projects
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -303,6 +303,21 @@ const Hero = () => {
 // Experience Component
 const Experience = () => {
   const experiences = [
+    {
+      company: "Interpro Wood Industries LLC | Dubai, UAE.",
+      role: "IT Administrator",
+      duration: "",
+      website: "https://interpro.ae/",
+      responsibilities: [
+        "Administer Microsoft 365 users, groups, licenses, roles and tenant settings, including license assignment and cost optimization.",
+        "Manage Exchange Online mailboxes, permissions and email rules, and support users with email and collaboration services.",
+        "Maintain Windows Server and domain controller environments (DC-0, DC-01 and DC-02).",
+        "Troubleshoot network connectivity and manage DNS, DHCP, network devices and FortiGate firewall issues.",
+        "Manage company data backup using Synology backup solutions and support data availability.",
+        "Provide IT support for Windows, macOS and Linux endpoints, telephony issues and day-to-day workplace technology.",
+        "Coordinate with ISPs and vendors to resolve service disruptions, manage website hosting and domain renewals.",
+      ],
+    },
     {
       company: "Sysnet Global Technologies Pvt Ltd.",
       role: "Technical Support Engineer",
@@ -402,17 +417,17 @@ const Experience = () => {
 const TechnicalSkills = () => {
   const skillCategories = [
     {
-      title: "Microsoft 365",
+      title: "IT Support & Systems",
       icon: <Code className="w-6 h-6" />,
-      skills: ["Exchange Online", "SharePoint", "OneDrive", "Teams", "User & Group", "Licensing: Business, E3, E5 ", "Domains", "Organizational Settings", "Service Health Monitoring", "End-User Support: Outlook, Teams, OneDrive"],
+      skills: ["L1/L2 end-user support", "Windows, macOS and Linux,", "hardware/software troubleshooting", "Active Directory", "Group Policy", "remote support with AnyDesk and TeamViewer", "Freshdesk incident and request management", "Outlook, Teams, OneDrive"],
     },
     {
-      title: "Azure",
+      title: "Microsoft Cloud & Identity",
       icon: <Code className="w-6 h-6" />,
-      skills: ["Entra ID (Azure AD)", "RBAC", "Virtual Machines", "Storage Accounts", "Networking", "NSG", "Conditional Access policies", "Azure Monitor and activity logs", "Automating tasks", "PowerShell and Azure CLI"],
+      skills: ["Microsoft 365 Admin Center", "Exchange Online", "SharePoint", "OneDrive", "Teams", "Entra ID (Azure AD)", "User and Group Administration", "RBAC", "MFA", "Conditional Access", "licensing and permission", "PowerShell and Azure CLI"],
     },
     {
-      title: "Intune",
+      title: "Intune & Endpoint Management",
       icon: <Code className="w-6 h-6" />,
       skills: ["Enrollment: Windows, Mac, Linux, Android", "Configuration Profiles: Wi-Fi, VPN", "Compliance Policies: Password, Encryption, OS Version Control", "Application Deployment: Installations, Updates, Monitoring", "Conditional Access Integration: Endpoint & Data Security", "Device Health & Access Monitoring"],
     },
@@ -431,24 +446,24 @@ const TechnicalSkills = () => {
         "Security & Antivirus",
       ],
     },
-    {
-      title: "DevOps & CI/CD",
-      icon: <Code className="w-6 h-6" />,
-      skills: [
-        "Git",
-        "Github",
-        "GitHub Actions",
-        "Jenkins",
-        "Docker",
-        "Kubernetes",
-        "Azure DevOps",
-        "Terraform",
-        "Ansible",
-        "Bash Scripting",
-        "Linux",
+    // {
+    //   title: "DevOps & CI/CD",
+    //   icon: <Code className="w-6 h-6" />,
+    //   skills: [
+    //     "Git",
+    //     "Github",
+    //     "GitHub Actions",
+    //     "Jenkins",
+    //     "Docker",
+    //     "Kubernetes",
+    //     "Azure DevOps",
+    //     "Terraform",
+    //     "Ansible",
+    //     "Bash Scripting",
+    //     "Linux",
 
-      ],
-    },
+    //   ],
+    // },
     
    
     {
@@ -475,11 +490,11 @@ const TechnicalSkills = () => {
       icon: <Briefcase className="w-6 h-6" />,
       skills: ["VMware Workstation", "Hyper-V", "KVM", "VirtualBox"],
     },
-     {
-      title: "Programming Languages",
-      icon: <Code className="w-6 h-6" />,
-      skills: ["Python","PowerShell", "Bash","SQL", "C", "C++"],
-    },
+    //  {
+    //   title: "Programming Languages",
+    //   icon: <Code className="w-6 h-6" />,
+    //   skills: ["Python","PowerShell", "Bash","SQL", "C", "C++"],
+    // },
     
   ];
 
@@ -570,71 +585,71 @@ const Projects = () => {
     },
   ];
 
-  return (
-    <section id="projects" className="py-16 bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-white">
-          PROJECTS
-        </h2>
+  // return (
+  //   <section id="projects" className="py-16 bg-gray-900">
+  //     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  //       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-white">
+  //         PROJECTS
+  //       </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className=" flex  bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
-                <div className="relative h-64 md:h-auto">
-                  {/* <img
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full h-full object-cover"
-                    /> */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
-                </div>
+  //       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  //         {projects.map((project, index) => (
+  //           <div
+  //             key={index}
+  //             className=" flex  bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300"
+  //           >
+  //             <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
+  //               <div className="relative h-64 md:h-auto">
+  //                 {/* <img
+  //                     src={project.image}
+  //                     alt={project.name}
+  //                     className="w-full h-full object-cover"
+  //                   /> */}
+  //                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
+  //               </div>
 
-                <div className="p-4 sm:p-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {project.name}
-                    </h3>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 mt-2 sm:mt-0"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {project.description.map((desc, i) => (
-                      <li key={i} className="text-gray-300 flex items-start">
-                        <span className="text-blue-400 mr-2 flex-shrink-0">
-                          •
-                        </span>
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 bg-gray-900 text-gray-300 rounded-full text-sm border border-gray-700"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  //               <div className="p-4 sm:p-6">
+  //                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+  //                   <h3 className="text-xl sm:text-2xl font-bold text-white">
+  //                     {project.name}
+  //                   </h3>
+  //                   <a
+  //                     href={project.link}
+  //                     target="_blank"
+  //                     rel="noopener noreferrer"
+  //                     className="text-blue-400 hover:text-blue-300 mt-2 sm:mt-0"
+  //                   >
+  //                     <ExternalLink className="w-5 h-5" />
+  //                   </a>
+  //                 </div>
+  //                 <ul className="space-y-2 mb-6">
+  //                   {project.description.map((desc, i) => (
+  //                     <li key={i} className="text-gray-300 flex items-start">
+  //                       <span className="text-blue-400 mr-2 flex-shrink-0">
+  //                         •
+  //                       </span>
+  //                       {desc}
+  //                     </li>
+  //                   ))}
+  //                 </ul>
+  //                 <div className="flex flex-wrap gap-2">
+  //                   {project.technologies.map((tech, i) => (
+  //                     <span
+  //                       key={i}
+  //                       className="px-3 py-1 bg-gray-900 text-gray-300 rounded-full text-sm border border-gray-700"
+  //                     >
+  //                       {tech}
+  //                     </span>
+  //                   ))}
+  //                 </div>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   </section>
+  // );
 };
 
 // Training & Certifications Component
@@ -649,6 +664,37 @@ const TrainingCertifications = () => {
         "Studied AWS machine learning services and deployment" */,
       ],
     },
+
+    {
+      name: "Microsoft 365 Certified: Administrator Expert",
+      institution: "Microsoft",
+      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/9bb46f882af5e318",
+      description: [
+        /* "Explored big data characteristics and different Vs of big data",
+        "Studied impact of big data and big data platforms" */,
+      ],
+    },
+
+    {
+      name: "Microsoft 365 Certified: Endpoint Administrator Associate",
+      institution: "Microsoft",
+      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/88c777f4bcde9e2d",
+      description: [
+       /*  "Explored big data characteristics and different Vs of big data",
+        "Studied impact of big data and big data platforms" */,
+      ],
+    },
+
+    {
+      name: "Microsoft Certified: Identity and Access Administrator Associate",
+      institution: "Microsoft",
+      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/bf23d5c4ea29d221",
+      description: [
+       /*  "Explored big data characteristics and different Vs of big data",
+        "Studied impact of big data and big data platforms" */,
+      ],
+    },
+
     {
       name: "Microsoft Certified: Azure Administrator Associate",
       institution: "Microsoft",
@@ -659,42 +705,25 @@ const TrainingCertifications = () => {
       ],
     },
     
+    
     {
-      name: "Microsoft 365 Certified: Administrator Expert",
+      name: "Microsoft Certified: Azure Network Engineer Associate",
       institution: "Microsoft",
-      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/9bb46f882af5e318",
-      description: [
-        /* "Explored big data characteristics and different Vs of big data",
-        "Studied impact of big data and big data platforms" */,
-      ],
-    },
-    {
-      name: "Microsoft 365 Certified: Endpoint Administrator Associate",
-      institution: "Microsoft",
-      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/88c777f4bcde9e2d",
+      link: "https://learn.microsoft.com/api/credentials/share/en-in/jayramdhawal-8856/974E5AB54A404CD4?sharingId=7F422B04E3ACD72C",
       description: [
        /*  "Explored big data characteristics and different Vs of big data",
         "Studied impact of big data and big data platforms" */,
       ],
     },
-    {
-      name: "Microsoft Certified: Information Security Administrator Associate",
-      institution: "Microsoft",
-      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-4016/credentials/b5392e6d072be1b5",
-      description: [
-       /*  "Explored big data characteristics and different Vs of big data",
-        "Studied impact of big data and big data platforms" */,
-      ],
-    },
-    {
-      name: "Microsoft Certified: Azure AI Fundamentals",
-      institution: "Microsoft",
-      link: "https://www.credly.com/badges/e4c0b74e-d2e0-45a0-ada0-a4539de451f6",
-      description: [
-        /* "Explored big data characteristics and different Vs of big data",
-        "Studied impact of big data and big data platforms" */,
-      ],
-    },
+    // {
+    //   name: "Microsoft Certified: Azure AI Fundamentals",
+    //   institution: "Microsoft",
+    //   link: "https://www.credly.com/badges/e4c0b74e-d2e0-45a0-ada0-a4539de451f6",
+    //   description: [
+    //     /* "Explored big data characteristics and different Vs of big data",
+    //     "Studied impact of big data and big data platforms" */,
+    //   ],
+    // },
   ];
 
   return (
@@ -798,8 +827,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+91-7565994926",
-      link: "tel:+91-7565994926",
+      value: "+971559275063",
+      link: "tel:+971559275063",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
@@ -816,7 +845,7 @@ const Contact = () => {
     {
       icon: <MapPinned className="w-6 h-6" />,
       label: "Address",
-      value: "Dubai, UAE",
+      value: "Dubai, United Arab Emirates",
       link: "#",
     },
   ];
