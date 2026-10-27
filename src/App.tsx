@@ -535,122 +535,7 @@ const TechnicalSkills = () => {
   );
 };
 
-// Projects Component
-const Projects = () => {
-  const projects = [
-    {
-      name: "ReviewInsight",
-      description: [
-        "Engineered element extractor to analyze 20,000+ hotel reviews",
-        "Achieved 90.51% sentiment accuracy classification",
-        "Reduced review analysis time by 40.75%",
-      ],
-      technologies: [
-        "Python",
-        "NLP",
-        "Machine Learning",
-        "Scikit",
-        "Streamlit",
-      ],
-      link: "https://samit-ric.streamlit.app",
-    },
-    {
-      name: "Artha Façade Solutions",
-      description: [
-        "A Full stack web application for facade solutions",
-        "Built using MERN stack",
-        "Deployed to Firebase and Cloud Functions",
-      ],
-      technologies: [
-        "MongoDB",
-        "Express",
-        "React JS",
-        "Node JS",
-        "Firebase",
-        "Cloud Functions",
-        "Tailwind CSS",
-        "TypeScript",
-      ],
-      link: "https://artha-fs.com",
-    },
-    {
-      name: "Vid2GIFs",
-      description: [
-        "Automated detection and conversion of expressions from videos to GIFs",
-        "Integrated OpenAI and Whisper AI for expression detection",
-        "Saves hours of manual video processing, delivering results in minutes",
-      ],
-      technologies: ["Python", "OpenAI", "Whisper AI", "Machine Learning"],
-      link: "https://github.com/Samit-Dhawal/Video2GIFs-whisper-ai-open-ai",
-    },
-  ];
 
-  // return (
-  //   <section id="projects" className="py-16 bg-gray-900">
-  //     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-  //       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-white">
-  //         PROJECTS
-  //       </h2>
-
-  //       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  //         {projects.map((project, index) => (
-  //           <div
-  //             key={index}
-  //             className=" flex  bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-500 transition-all duration-300"
-  //           >
-  //             <div className="grid grid-cols-1 md:grid-cols-1 gap-0">
-  //               <div className="relative h-64 md:h-auto">
-  //                 {/* <img
-  //                     src={project.image}
-  //                     alt={project.name}
-  //                     className="w-full h-full object-cover"
-  //                   /> */}
-  //                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
-  //               </div>
-
-  //               <div className="p-4 sm:p-6">
-  //                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-  //                   <h3 className="text-xl sm:text-2xl font-bold text-white">
-  //                     {project.name}
-  //                   </h3>
-  //                   <a
-  //                     href={project.link}
-  //                     target="_blank"
-  //                     rel="noopener noreferrer"
-  //                     className="text-blue-400 hover:text-blue-300 mt-2 sm:mt-0"
-  //                   >
-  //                     <ExternalLink className="w-5 h-5" />
-  //                   </a>
-  //                 </div>
-  //                 <ul className="space-y-2 mb-6">
-  //                   {project.description.map((desc, i) => (
-  //                     <li key={i} className="text-gray-300 flex items-start">
-  //                       <span className="text-blue-400 mr-2 flex-shrink-0">
-  //                         •
-  //                       </span>
-  //                       {desc}
-  //                     </li>
-  //                   ))}
-  //                 </ul>
-  //                 <div className="flex flex-wrap gap-2">
-  //                   {project.technologies.map((tech, i) => (
-  //                     <span
-  //                       key={i}
-  //                       className="px-3 py-1 bg-gray-900 text-gray-300 rounded-full text-sm border border-gray-700"
-  //                     >
-  //                       {tech}
-  //                     </span>
-  //                   ))}
-  //                 </div>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   </section>
-  // );
-};
 
 // Training & Certifications Component
 const TrainingCertifications = () => {
@@ -935,7 +820,6 @@ const App = () => {
         <Hero />
         <Experience />
         <TechnicalSkills />
-        <Projects />
         <TrainingCertifications />
         <Education />
         <Contact />
