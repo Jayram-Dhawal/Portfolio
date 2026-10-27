@@ -238,8 +238,8 @@ const Hero = () => {
             </a>
             . */}
           </span>{" "}
-          Looking for a Opportunity in Cloud Engineer / IT Support Engineer / System
-          Administrator
+          Looking for a Opportunity in IT Support Engineer / System Administrator / IT Officer / Microsoft Workplace Engineer
+          
         </p>
 
         <div className="flex items-center justify-center flex-shrink-0">
