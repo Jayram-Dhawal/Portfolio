@@ -721,12 +721,12 @@ const Contact = () => {
       value: "linkedin.com/in/jayram-dhawal",
       link: "https://linkedin.com/in/jayram-dhawal",
     },
-    {
-      icon: <Github className="w-6 h-6" />,
-      label: "GitHub",
-      value: "github.com/Jayram-Dhawal",
-      link: "https://github.com/Jayram-Dhawal",
-    },
+    // {
+    //   icon: <Github className="w-6 h-6" />,
+    //   label: "GitHub",
+    //   value: "github.com/Jayram-Dhawal",
+    //   link: "https://github.com/Jayram-Dhawal",
+    // },
     {
       icon: <MapPinned className="w-6 h-6" />,
       label: "Address",
