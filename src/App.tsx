@@ -26,8 +26,7 @@ const TextWriter = () => {
     "System Administrator",
     "Cloud Engineer",
     "IT Operation Engineer",
-    "AI Enthusiast",
-    "Tech Content Creator",
+    "Content Creator",
   ];
 
   useEffect(() => {
@@ -540,26 +539,6 @@ const TechnicalSkills = () => {
 const TrainingCertifications = () => {
   const certifications = [
     {
-      name: "Red Hat Certified System Administrator (RHCSA)",
-      institution: "Red Hat",
-      link: "https://rhtapps.redhat.com/verify?certId=240-105-692",
-      description: [
-        /* "Learned ML algorithms: classification, regression, and clustering",
-        "Studied AWS machine learning services and deployment" */,
-      ],
-    },
-
-    {
-      name: "Microsoft 365 Certified: Administrator Expert",
-      institution: "Microsoft",
-      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/9bb46f882af5e318",
-      description: [
-        /* "Explored big data characteristics and different Vs of big data",
-        "Studied impact of big data and big data platforms" */,
-      ],
-    },
-
-    {
       name: "Microsoft 365 Certified: Endpoint Administrator Associate",
       institution: "Microsoft",
       link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/88c777f4bcde9e2d",
@@ -580,6 +559,26 @@ const TrainingCertifications = () => {
     },
 
     {
+      name: "Red Hat Certified System Administrator (RHCSA)",
+      institution: "Red Hat",
+      link: "https://rhtapps.redhat.com/verify?certId=240-105-692",
+      description: [
+        /* "Learned ML algorithms: classification, regression, and clustering",
+        "Studied AWS machine learning services and deployment" */,
+      ],
+    },
+
+    {
+      name: "Microsoft 365 Certified: Administrator Expert",
+      institution: "Microsoft",
+      link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/9bb46f882af5e318",
+      description: [
+        /* "Explored big data characteristics and different Vs of big data",
+        "Studied impact of big data and big data platforms" */,
+      ],
+    },
+
+    {
       name: "Microsoft Certified: Azure Administrator Associate",
       institution: "Microsoft",
       link: "https://learn.microsoft.com/en-us/users/jayramdhawal-8856/credentials/af0122e228f29955?ref=https%3A%2F%2Fwww.linkedin.com%2F",
@@ -588,7 +587,6 @@ const TrainingCertifications = () => {
         "Gained expertise in Data Analysis, ML, NLP, and cloud technologies" */,
       ],
     },
-    
     
     {
       name: "Microsoft Certified: Azure Network Engineer Associate",
