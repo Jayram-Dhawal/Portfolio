@@ -261,12 +261,11 @@ const Hero = () => {
           </div>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-6xl text-justify">
-            Microsoft Certified Cloud & IT Administrator with 3+ years of experience in IT Support and Administration,
-            specializing in Cloud Infrastructure and End User Management.
-            deploying and managing scalable, secure, and efficient IT
-            infrastructure. My expertise spans across cloud platforms, system
-            administration, and innovative IT solutions that drive business
-            growth.
+            IT professional with 3+ years of hands-on experience in IT support, system administration, and enterprise IT operations. Currently working as an
+IT Administrator in Dubai, managing Microsoft 365, Exchange Online, Windows Server environments, endpoint systems, network infrastructure,
+FortiGate firewalls, and data backup solutions. Skilled in Entra ID, Intune, identity and access management, troubleshooting, and end-user
+support. Holds Microsoft certifications in Azure administration, Microsoft 365 administration, endpoint management, and identity and access
+management, alongside Red Hat RHCSA.
             {/* A self-motivated professional with expertise in AI Development, Machine Learning,
             and Full Stack Development. Passionate about extracting meaningful insights from data
             and building innovative solutions that drive business success internationally. */}
