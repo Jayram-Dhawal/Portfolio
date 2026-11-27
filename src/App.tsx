@@ -94,7 +94,7 @@ const SidebarNavigation = () => {
     },
     {
   name: "Resume",
-  href: `${import.meta.env.BASE_URL}IT_Engineer_Jayram_Dhawal.pdf`,
+  href: `${import.meta.env.BASE_URL}Jayram_Dhawal_(IT Engineer, Dubai, UAE).pdf`,
   download: true,
   icon: <span className="text-lg">📄</span>,
 },
@@ -272,7 +272,7 @@ management, alongside Red Hat RHCSA.
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 w-full sm:w-auto">
             <a
-              href="./IT_Engineer_Jayram_Dhawal.pdf"
+              href="./Jayram_Dhawal_(IT Engineer, Dubai, UAE).pdf"
               download
               className="inline-block bg-cyan-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-cyan-600 transform hover:-translate-y-1 transition-all duration-300 text-center"
             >
